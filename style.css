@@ -122,7 +122,8 @@ h2 { font-size: clamp(36px, 4vw, 56px); text-wrap: balance; }
 .details { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 10px 28px; font-size: 15px; border-top: 1px solid var(--rule); padding-top: 24px; }
 .details dt { align-self: center; color: var(--muted); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; }
 .details dd { margin: 0; }
-.contact .ph { aspect-ratio: 0.83 / 1; border: 1px solid var(--rule); }
+.contact .ph { aspect-ratio: 1.15 / 1; border: 1px solid var(--rule); }
+.contact .ph img { object-position: 50% 68%; }   /* keep the sign in frame */
 
 /* Footer (same on every page) */
 .site-footer { padding: 32px var(--pad); border-top: 1px solid var(--rule); font-size: 13px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 16px 24px; justify-content: space-between; }
