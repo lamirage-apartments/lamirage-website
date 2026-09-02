@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Mirage Apartments — Tempe, AZ</title>
+<meta name="description" content="La Mirage is a small gated apartment community at 610 E Gilbert Dr in Tempe, Arizona. One- and two-bedroom homes with a pool, spa and fitness center. Water, sewer and trash included.">
+
+<!-- EDIT: the picture and text shown when the link is shared by text or on social media. -->
+<meta property="og:title" content="La Mirage Apartments — Tempe, AZ">
+<meta property="og:description" content="A small gated apartment community in Tempe. One- and two-bedroom homes with a pool, spa and fitness center.">
+<meta property="og:image" content="https://lamirageapartments.com/photos/social-preview.jpg">
+
+<link rel="icon" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     WHERE TO CHANGE THINGS  (search for "EDIT:" — in this file and the other three pages)
+
+       Phone number ....... appears on every page. On this page: header button, hero button,
+                            Contact section (button + the PHONE line). Change the tel: link AND the visible text.
+       Email, office hours  Contact section, near the bottom of this page (nowhere else)
+       Rent ("From $…") ... the two floor-plan cards here, and once more on one-bedroom.html / two-bedroom.html
+       Address ............ hero, Contact section, footer of every page
+       Photos ............. the photos/ folder; each <img> points at one file
+
+     Everything else is wording. Change the text between the tags; leave the tags alone.
+     ═══════════════════════════════════════════════════════════════════════ -->
+
+<header class="site-header">
+  <a class="brand" href="index.html"><img src="photos/logo-mark.png" alt=""><span>La Mirage Apartments</span></a>
+  <nav>
+    <a class="hide-sm" href="#homes">Homes</a>
+    <a class="hide-sm" href="#amenities">Amenities</a>
+    <a href="availability.html">Availability</a>
+    <!-- EDIT: phone -->
+    <a class="btn btn-clay" href="tel:+14809007649">Call for a tour</a>
+  </nav>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-text">
+    <!-- EDIT: address -->
+    <p class="eyebrow">610 E Gilbert Dr &middot; Tempe, AZ 85288</p>
+    <h1>A small gated apartment community in Tempe.</h1>
+    <p class="lede">Two floor plans, a small gated courtyard, and a pool that is rarely crowded. Water, sewer and trash are included, and every home has a private patio or balcony.</p>
+    <div class="btn-row">
+      <a class="btn btn-dark" href="availability.html">See what's open</a>
+      <!-- EDIT: phone (link and text) -->
+      <a class="btn btn-outline" href="tel:+14809007649">Call (480) 900-7649</a>
+    </div>
+  </div>
+  <div class="ph"><img src="photos/exterior-street-entrance.jpg" alt="The gate and entrance from E Gilbert Dr"></div>
+</section>
+
+<section class="section" id="homes">
+  <div class="section-head">
+    <h2>Two homes to choose from</h2>
+    <p>Finishes vary from unit to unit. Call to see whichever homes are open.</p>
+  </div>
+  <div class="plans">
+
+    <article class="plan">
+      <a class="ph" href="one-bedroom.html"><img src="photos/1x1-kitchen.jpg" alt="One-bedroom kitchen"></a>
+      <div class="plan-body">
+        <div class="plan-title"><h3>One bedroom</h3><span>1&times;1</span></div>
+        <div class="specs">
+          <div><span class="label">Size</span>633 sq ft</div>
+          <div><span class="label">Bed / bath</span>1 bd / 1 ba</div>
+          <!-- EDIT: one-bedroom rent (also on one-bedroom.html) -->
+          <div><span class="label">Rent</span>From $1,250</div>
+        </div>
+        <p>A galley kitchen open to the living room, a full bath, and a private patio or balcony off the main room.</p>
+        <div class="btn-row">
+          <a class="btn btn-dark" href="one-bedroom.html">See details</a>
+          <a href="availability.html">Check availability</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="plan">
+      <a class="ph" href="two-bedroom.html"><img src="photos/2x2-dining-kitchen-peninsula.jpg" alt="Two-bedroom dining area and kitchen peninsula"></a>
+      <div class="plan-body">
+        <div class="plan-title"><h3>Two bedroom</h3><span>2&times;2</span></div>
+        <div class="specs">
+          <div><span class="label">Size</span>881 sq ft</div>
+          <div><span class="label">Bed / bath</span>2 bd / 2 ba</div>
+          <!-- EDIT: two-bedroom rent (also on two-bedroom.html) -->
+          <div><span class="label">Rent</span>From $1,500</div>
+        </div>
+        <p>Two bedrooms with their own full baths, a kitchen peninsula onto the dining area, and a private patio or balcony.</p>
+        <div class="btn-row">
+          <a class="btn btn-dark" href="two-bedroom.html">See details</a>
+          <a href="availability.html">Check availability</a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section class="section amenities" id="amenities">
+  <div class="amen">
+    <div class="amen-text">
+      <h2>Behind the gate</h2>
+      <p>The community is small, so the pool is rarely busy. Gas grills and shaded seating sit alongside it, and the gate is closed around the clock.</p>
+      <ul class="amen-list">
+        <li><span>Pool and spa</span><span>Open year round</span></li>
+        <li><span>Gas BBQ grills</span><span>Poolside</span></li>
+        <li><span>Fitness center</span><span>On site</span></li>
+        <li><span>Gated entry</span><span>24 hours</span></li>
+        <li><span>Bike storage</span><span>Secured</span></li>
+        <li><span>Water, sewer, trash</span><span>Included</span></li>
+      </ul>
+    </div>
+    <div class="amen-photos">
+      <div class="ph wide"><img src="photos/amenity-pool.jpg" alt="The pool"></div>
+      <div class="ph tall"><img src="photos/amenity-fountain-grills.jpg" alt="Courtyard fountain and gas grills"></div>
+      <div class="stack">
+        <div class="ph"><img src="photos/amenity-pool-spa-ramada.jpg" alt="Spa and shaded ramada"></div>
+        <div class="ph"><img src="photos/exterior-leasing-office.jpg" alt="The leasing office"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="contact-grid">
+    <div class="contact-text">
+      <h2>Come see a home in person.</h2>
+      <p class="lede">Call and we'll open whatever is vacant that day. If nothing is open, we'll tell you when something will be.</p>
+      <div class="btn-row">
+        <!-- EDIT: phone (link and text) -->
+        <a class="btn btn-clay" href="tel:+14809007649">Call (480) 900-7649</a>
+        <a class="btn btn-outline" href="availability.html">See what's open</a>
+      </div>
+      <dl class="details">
+        <!-- EDIT: address -->
+        <dt>Address</dt><dd>610 E Gilbert Dr, Tempe, AZ 85288</dd>
+        <!-- EDIT: office hours -->
+        <dt>Office hours</dt><dd>Mon–Fri, 9:00am–5:00pm<br>Sat, 10:00am–3:00pm by appointment only</dd>
+        <!-- EDIT: phone (link and text) -->
+        <dt>Phone</dt><dd><a href="tel:+14809007649">(480) 900-7649</a></dd>
+        <!-- EDIT: email (link and text) -->
+        <dt>Email</dt><dd><a href="mailto:Tempelamirage@gmail.com">Tempelamirage@gmail.com</a></dd>
+      </dl>
+    </div>
+    <div class="ph"><img src="photos/exterior-monument-sign.jpg" alt="The La Mirage monument sign under bougainvillea"></div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <!-- EDIT: address -->
+  <span>La Mirage &middot; 610 E Gilbert Dr, Tempe, AZ 85288</span>
+  <nav><a href="one-bedroom.html">One bedroom</a><a href="two-bedroom.html">Two bedroom</a><a href="availability.html">Availability</a></nav>
+  <p class="eho">Equal Housing Opportunity. We do business in accordance with the Fair Housing Act and do not discriminate on the basis of race, color, religion, sex, handicap, familial status or national origin.</p>
+</footer>
+
+</body>
+</html>

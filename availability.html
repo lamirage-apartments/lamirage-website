@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Availability — La Mirage Apartments, Tempe</title>
+<meta name="description" content="Homes currently open at La Mirage Apartments in Tempe, with exact rents and move-in dates, straight from our leasing system.">
+<link rel="icon" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- On this page you might change: the phone number (header button). The listings themselves
+     come from AppFolio; see the note next to the <script> tags below. -->
+
+<header class="site-header">
+  <a class="brand" href="index.html"><img src="photos/logo-mark.png" alt=""><span>La Mirage Apartments</span></a>
+  <nav>
+    <a class="hide-sm" href="index.html#homes">Homes</a>
+    <a class="hide-sm" href="index.html#amenities">Amenities</a>
+    <a href="availability.html">Availability</a>
+    <!-- EDIT: phone -->
+    <a class="btn btn-clay" href="tel:+14809007649">Call for a tour</a>
+  </nav>
+</header>
+
+<main class="board-page">
+  <h1>What&rsquo;s open</h1>
+  <p class="lede">Updated by our leasing system. Rents and move-in dates shown here are current. Pick a home to see it and start an application.</p>
+
+  <div class="board">
+    <!-- AppFolio listings. These two <script> tags must stay right here, in this order,
+         with no "async" or "defer" added — the widget draws itself into the page at
+         this exact spot while the page is loading. -->
+    <script src="https://belbrook.appfolio.com/javascripts/listing.js"></script>
+    <script>
+      Appfolio.Listing({
+        hostUrl: 'belbrook.appfolio.com',
+        // propertyGroup: 'La Mirage',   // EDIT: uncomment once a property group exists in AppFolio,
+                                         // so only this building's homes are listed here
+        themeColor: '#B0613A',
+        height: '760px',
+        width: '100%',
+        defaultOrder: 'date_posted'
+      });
+    </script>
+  </div>
+
+  <p class="board-note">Applications are handled through our leasing portal, which is where screening and any application fee are processed.</p>
+</main>
+
+<footer class="site-footer">
+  <!-- EDIT: address -->
+  <span>La Mirage &middot; 610 E Gilbert Dr, Tempe, AZ 85288</span>
+  <nav><a href="index.html">Home</a><a href="one-bedroom.html">One bedroom</a><a href="two-bedroom.html">Two bedroom</a></nav>
+  <p class="eho">Equal Housing Opportunity. We do business in accordance with the Fair Housing Act and do not discriminate on the basis of race, color, religion, sex, handicap, familial status or national origin.</p>
+</footer>
+
+</body>
+</html>

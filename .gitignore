@@ -1,0 +1,10 @@
+# Working files that are not part of the website:
+# original photos and full-size masters (155 MB; the originals carry GPS data)
+la-mirage-photos/
+# design drafts and the Claude Design export (full-size photos, design-tool runtime)
+artifacts/
+Pricing and plans layout/
+*.zip
+design-brief.md
+.claude/
+.DS_Store

@@ -1,0 +1,181 @@
+/* La Mirage — the one stylesheet for all four pages.
+   Colours are named here at the top. Everything below is layout; you should rarely need to touch it. */
+
+:root {
+  --sand:      #F4EFE6;   /* page background */
+  --cream:     #FBF8F2;   /* cards */
+  --panel:     #EFE8DC;   /* the amenities band */
+  --photo:     #E7DFD1;   /* shows behind a photo while it loads */
+  --rule:      #DCD3C4;   /* thin lines */
+  --rule-dark: #D3C9B8;
+  --ink:       #241C15;   /* text and dark buttons */
+  --ink-soft:  #57493D;   /* paragraphs */
+  --muted:     #8A7A6C;   /* small labels, footer */
+  --clay:      #B0613A;   /* links and "call" buttons; also the AppFolio themeColor in availability.html */
+  --serif: "Instrument Serif", Georgia, serif;
+  --sans:  "Instrument Sans", system-ui, sans-serif;
+  --pad: 64px;            /* left/right page margin (smaller on phones, see the bottom of this file) */
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--sand);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--clay); text-decoration: none; }
+a:hover { color: var(--ink); }
+a:focus-visible { outline: 3px solid var(--clay); outline-offset: 3px; }
+img { display: block; max-width: 100%; }
+p { margin: 0; }
+
+h1, h2, h3 { font-family: var(--serif); font-weight: 400; margin: 0; line-height: 1.02; letter-spacing: -0.01em; }
+h1 { font-size: clamp(44px, 5.4vw, 76px); line-height: 1; letter-spacing: -0.02em; text-wrap: balance; }
+h2 { font-size: clamp(36px, 4vw, 56px); text-wrap: balance; }
+
+.lede { font-size: 19px; line-height: 1.6; color: var(--ink-soft); max-width: 46ch; text-wrap: pretty; }
+.eyebrow { font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+.label { display: block; color: var(--muted); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; }
+.section { padding: 104px var(--pad) 112px; border-bottom: 1px solid var(--rule); }
+
+/* Buttons */
+.btn { display: inline-block; padding: 16px 28px; border-radius: 2px; border: 1px solid transparent; font-size: 15px; font-weight: 500; }
+.btn-dark { background: var(--ink); color: var(--sand); }
+.btn-dark:hover { background: var(--clay); color: var(--sand); }
+.btn-clay { background: var(--clay); color: var(--cream); }
+.btn-clay:hover { background: var(--ink); color: var(--cream); }
+.btn-outline { border-color: #C6BAA9; color: var(--ink); }
+.btn-outline:hover { border-color: var(--ink); color: var(--ink); }
+.btn-row { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+
+/* Header (same on every page) */
+.site-header {
+  position: sticky; top: 0; z-index: 20;
+  display: flex; align-items: center; justify-content: space-between; gap: 24px;
+  padding: 20px 48px;
+  border-bottom: 1px solid var(--rule);
+  background: rgba(244, 239, 230, 0.94);
+  backdrop-filter: blur(8px);
+}
+.brand { display: flex; align-items: center; gap: 12px; color: var(--ink); font-family: var(--serif); font-size: 24px; }
+.brand img { width: 40px; height: 40px; object-fit: contain; }
+.site-header nav { display: flex; align-items: center; gap: 32px; font-size: 14px; letter-spacing: 0.02em; }
+.site-header nav a:not(.btn) { color: var(--ink-soft); }
+.site-header nav a:not(.btn):hover { color: var(--ink); }
+.site-header nav .btn { padding: 11px 20px; }
+
+/* Photo frames: a box with a fixed shape, and the picture cropped to fill it */
+.ph { display: block; position: relative; background: var(--photo); overflow: hidden; }
+.ph img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+/* Home: hero */
+.hero { border-bottom: 1px solid var(--rule); }
+.hero-text { padding: 88px var(--pad) 72px; display: flex; flex-direction: column; gap: 32px; max-width: 900px; }
+.hero h1 { font-size: clamp(52px, 6.4vw, 92px); line-height: 0.98; }
+.hero .ph { aspect-ratio: 2.4 / 1; border-top: 1px solid var(--rule); }
+.hero .ph img { object-position: 50% 58%; }
+
+/* Home: the two floor-plan cards */
+.section-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; flex-wrap: wrap; margin-bottom: 52px; }
+.section-head p { color: var(--ink-soft); max-width: 40ch; }
+.plans { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+.plan { background: var(--cream); border: 1px solid var(--rule); border-radius: 3px; overflow: hidden; display: flex; flex-direction: column; }
+.plan .ph { aspect-ratio: 1.55 / 1; }
+.plan-body { padding: 32px; display: flex; flex-direction: column; gap: 22px; flex: 1; }
+.plan-title { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
+.plan-title h3 { font-size: 40px; line-height: 1; }
+.plan-title span { font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.specs { display: flex; flex-wrap: wrap; gap: 16px 32px; font-size: 15px; color: var(--ink-soft); }
+.specs .label { margin-bottom: 4px; }
+.plan-body p { color: var(--ink-soft); text-wrap: pretty; }
+.plan-body .btn-row { margin-top: auto; padding-top: 8px; gap: 20px; }
+.plan-body .btn { padding: 14px 24px; }
+
+/* Home: amenities */
+.amenities { background: var(--panel); }
+.amen { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 56px; align-items: start; }
+.amen-text { display: flex; flex-direction: column; gap: 28px; position: sticky; top: 120px; }
+.amen-text p { font-size: 18px; color: var(--ink-soft); max-width: 38ch; text-wrap: pretty; }
+.amen-list { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--rule-dark); max-width: 420px; }
+.amen-list li { display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--rule-dark); font-size: 15px; }
+.amen-list li span:last-child { color: var(--muted); }
+.amen-photos { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.amen-photos .ph { border: 1px solid var(--rule-dark); }
+.amen-photos .wide { grid-column: span 2; aspect-ratio: 1.7 / 1; }
+.amen-photos .tall { aspect-ratio: 0.78 / 1; }
+.amen-photos .stack { display: grid; gap: 16px; align-content: start; }
+.amen-photos .stack .ph { aspect-ratio: 1.55 / 1; }
+
+/* Home: contact */
+.contact { padding: 112px var(--pad) 120px; }
+.contact-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: center; }
+.contact-text { display: flex; flex-direction: column; gap: 32px; }
+.contact h2 { font-size: clamp(40px, 4.6vw, 64px); line-height: 1; }
+.contact .lede { font-size: 18px; max-width: 44ch; }
+.details { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 10px 28px; font-size: 15px; border-top: 1px solid var(--rule); padding-top: 24px; }
+.details dt { align-self: center; color: var(--muted); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; }
+.details dd { margin: 0; }
+.contact .ph { aspect-ratio: 0.83 / 1; border: 1px solid var(--rule); }
+
+/* Footer (same on every page) */
+.site-footer { padding: 32px var(--pad); border-top: 1px solid var(--rule); font-size: 13px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 16px 24px; justify-content: space-between; }
+.site-footer a { color: var(--muted); }
+.site-footer a:hover { color: var(--ink); }
+.site-footer nav { display: flex; flex-wrap: wrap; gap: 24px; }
+.eho { flex-basis: 100%; max-width: 70ch; line-height: 1.55; }
+
+/* Floor-plan pages */
+.page-head { padding: 56px var(--pad) 48px; border-bottom: 1px solid var(--rule); }
+.back { font-size: 13px; letter-spacing: 0.06em; color: var(--muted); }
+.page-head-grid { display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: end; margin-top: 28px; }
+.page-head-text { display: flex; flex-direction: column; gap: 24px; max-width: 640px; }
+.facts { margin: 0; display: grid; grid-template-columns: repeat(3, auto); gap: 6px 44px; }
+.facts dt { color: var(--muted); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; }
+.facts dd { margin: 0; font-family: var(--serif); font-size: 30px; }
+.photo-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--rule); border-bottom: 1px solid var(--rule); }
+.photo-grid .ph { aspect-ratio: 16 / 9; }
+.photo-grid .wide { grid-column: span 2; aspect-ratio: 1.83 / 1; }
+.photo-grid .drawing { background: var(--sand); display: flex; align-items: center; justify-content: center; padding: 40px; }
+.photo-grid .drawing img { position: static; width: auto; height: auto; max-width: 100%; max-height: 100%; object-fit: contain; }
+.photo-note { padding: 18px var(--pad); font-size: 13px; color: var(--muted); border-bottom: 1px solid var(--rule); }
+.cta { padding: 104px var(--pad) 120px; display: flex; flex-direction: column; gap: 28px; align-items: flex-start; max-width: 760px; }
+.cta h2 { font-size: clamp(38px, 4.4vw, 60px); }
+.cta p { font-size: 18px; color: var(--ink-soft); text-wrap: pretty; }
+
+/* Availability page */
+.board-page { padding: 56px var(--pad) 96px; }
+.board-page h1 { margin-bottom: 20px; }
+.board-page .lede { margin-bottom: 40px; max-width: 56ch; }
+.board { border: 1px solid var(--rule); background: var(--cream); padding: 8px; min-height: 776px; }
+.board-note { margin-top: 20px; font-size: 13px; color: var(--muted); max-width: 70ch; }
+
+/* Tablets and phones */
+@media (max-width: 900px) {
+  .plans, .amen, .contact-grid, .page-head-grid { grid-template-columns: 1fr; }
+  .amen-text { position: static; }
+  .hero .ph { aspect-ratio: 1.6 / 1; }
+}
+@media (max-width: 720px) {
+  :root { --pad: 24px; }
+  .site-header { padding: 14px 24px; gap: 12px; }
+  .site-header nav { gap: 16px; }
+  .site-header nav .hide-sm { display: none; }
+  .brand { font-size: 20px; }
+  .section, .contact, .cta { padding-top: 64px; padding-bottom: 72px; }
+  .hero-text { padding-top: 56px; padding-bottom: 48px; gap: 24px; }
+  .plan-title h3 { font-size: 32px; }
+  .photo-grid { grid-template-columns: 1fr; }
+  .photo-grid .wide { grid-column: auto; }
+  .facts { gap: 6px 24px; }
+  .facts dd { font-size: 24px; }
+}
+@media (max-width: 480px) {
+  .brand span { display: none; }   /* the logo mark alone; the name would not fit beside the buttons */
+  .site-header nav .btn { padding: 10px 14px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
