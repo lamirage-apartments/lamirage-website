@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lamirageapartments.com/sitemap.xml
+Sitemap: https://www.lamirageapartments.com/sitemap.xml
