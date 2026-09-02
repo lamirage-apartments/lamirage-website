@@ -170,6 +170,7 @@ h2 { font-size: clamp(36px, 4vw, 56px); text-wrap: balance; }
 
 /* Tablets and phones */
 @media (max-width: 900px) {
+  .site-header nav .hide-sm { display: none; }   /* Homes and Amenities links; the name is long */
   .plans, .amen, .contact-grid, .page-head-grid { grid-template-columns: 1fr; }
   .hero .ph { aspect-ratio: 1.6 / 1; }
 }
@@ -177,7 +178,6 @@ h2 { font-size: clamp(36px, 4vw, 56px); text-wrap: balance; }
   :root { --pad: 24px; }
   .site-header { padding: 14px 24px; gap: 12px; }
   .site-header nav { gap: 16px; }
-  .site-header nav .hide-sm { display: none; }
   .brand { font-size: 20px; }
   .section, .contact, .cta { padding-top: 64px; padding-bottom: 72px; }
   .hero-text { padding-top: 56px; padding-bottom: 48px; gap: 24px; }
@@ -189,7 +189,7 @@ h2 { font-size: clamp(36px, 4vw, 56px); text-wrap: balance; }
   .lightbox figure { padding: 56px 12px 48px; }
   .lightbox .lb-prev, .lightbox .lb-next { top: auto; bottom: 0; transform: none; }
 }
-@media (max-width: 480px) {
+@media (max-width: 560px) {
   .brand span { display: none; }   /* the logo mark alone; the name would not fit beside the buttons */
   .site-header nav .btn { padding: 10px 14px; }
 }
