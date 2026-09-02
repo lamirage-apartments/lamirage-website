@@ -98,7 +98,7 @@ h2 { font-size: clamp(36px, 4vw, 56px); text-wrap: balance; }
 
 /* Home: amenities */
 .amenities { background: var(--panel); }
-.amen { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 56px; align-items: start; }
+.amen { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
 .amen-text { display: flex; flex-direction: column; gap: 28px; }
 .amen-text p { font-size: 18px; color: var(--ink-soft); max-width: 38ch; text-wrap: pretty; }
 .amen-list { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--rule-dark); max-width: 420px; }
@@ -106,10 +106,8 @@ h2 { font-size: clamp(36px, 4vw, 56px); text-wrap: balance; }
 .amen-list li span:last-child { color: var(--muted); }
 .amen-photos { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
 .amen-photos .ph { border: 1px solid var(--rule-dark); }
+.amen-photos .ph { aspect-ratio: 1.5 / 1; }
 .amen-photos .wide { grid-column: span 2; aspect-ratio: 1.7 / 1; }
-.amen-photos .tall { aspect-ratio: 0.78 / 1; }
-.amen-photos .stack { display: grid; gap: 16px; align-content: start; }
-.amen-photos .stack .ph { aspect-ratio: 1.55 / 1; }
 
 /* Home: contact */
 .contact { padding: 112px var(--pad) 120px; }
