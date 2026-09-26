@@ -126,11 +126,11 @@ h2 { font-size: clamp(36px, 4vw, 56px); text-wrap: balance; }
 .contact .ph img { object-position: 50% 68%; }   /* keep the sign in frame */
 
 /* Footer (same on every page) */
-.site-footer { padding: 32px var(--pad); border-top: 1px solid var(--rule); font-size: 13px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 16px 24px; justify-content: space-between; }
+.site-footer { padding: 32px var(--pad); border-top: 1px solid var(--rule); font-size: 13px; color: var(--muted); display: grid; grid-template-columns: 1fr auto; gap: 16px 24px; }
 .site-footer a { color: var(--muted); }
 .site-footer a:hover { color: var(--ink); }
 .site-footer nav { display: flex; flex-wrap: wrap; gap: 24px; }
-.eho { flex-basis: 100%; max-width: 70ch; line-height: 1.55; }
+.eho { grid-column: 1 / -1; max-width: 70ch; line-height: 1.55; }   /* always on its own line below the address and links */
 
 /* Floor-plan pages and the neighborhood page: page heading, photos, call-to-action */
 .page-head { padding: 56px var(--pad) 48px; border-bottom: 1px solid var(--rule); }
@@ -151,15 +151,27 @@ h2 { font-size: clamp(36px, 4vw, 56px); text-wrap: balance; }
 .cta p { font-size: 18px; color: var(--ink-soft); text-wrap: pretty; }
 
 /* Neighborhood page: the photo cards, the note under the distances list */
-.area-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 48px 32px; padding: 88px var(--pad) 8px; }
+.area-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 48px 32px; padding: 64px var(--pad) 8px; }
 .area-card { display: flex; flex-direction: column; gap: 14px; }
 .area-card .ph { aspect-ratio: 3 / 2; border: 1px solid var(--rule); cursor: zoom-in; margin-bottom: 6px; }
-.area-card h2 { font-size: clamp(26px, 2.6vw, 34px); }
+.area-card h2 { font-size: clamp(24px, 2vw, 28px); }
 .area-card p { font-size: 17px; color: var(--ink-soft); text-wrap: pretty; }
 .area-card .credit { font-size: 12px; color: var(--muted); }
 .area-card .credit a { color: var(--muted); text-decoration: underline; }
 .amen-text .list-note { font-size: 13px; color: var(--muted); margin-top: -12px; }
 #nearby .amen-list li span:last-child { white-space: nowrap; text-align: right; }   /* keep "2.2 mi · 8 min drive" on one line; the place name wraps instead */
+
+/* Neighborhood page: tighter spacing and smaller headings than the other pages, because this page
+   has more sections and a long main heading. Rules starting ".neighborhood" affect only this page. */
+.neighborhood .page-head-text { max-width: 880px; }
+.neighborhood h1 { font-size: clamp(36px, 4.2vw, 60px); line-height: 1.04; }
+.neighborhood .page-head .lede { max-width: 62ch; }
+.neighborhood .section { padding-top: 72px; padding-bottom: 80px; }
+.neighborhood #nearby h2, .neighborhood .cta h2 { font-size: clamp(30px, 3vw, 44px); }
+.neighborhood #nearby .amen { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 48px; align-items: stretch; }
+.neighborhood #nearby .amen-list { max-width: none; }
+.neighborhood #nearby .map { aspect-ratio: auto; min-height: 400px; }   /* the map fills the height of the list beside it */
+.neighborhood .cta { padding-top: 88px; padding-bottom: 96px; }
 
 /* Availability page */
 .board-page { padding: 56px var(--pad) 96px; }
@@ -183,10 +195,13 @@ h2 { font-size: clamp(36px, 4vw, 56px); text-wrap: balance; }
 /* Tablets and phones */
 @media (max-width: 1000px) {
   .site-header nav .hide-sm { display: none; }   /* Homes, Amenities and Neighborhood links; the name is long */
+  .site-footer { grid-template-columns: 1fr; }   /* address, links and Equal Housing line stack */
 }
 @media (max-width: 900px) {
   .plans, .amen, .contact-grid, .page-head-grid { grid-template-columns: 1fr; }
   .hero .ph { aspect-ratio: 1.6 / 1; }
+  .neighborhood #nearby .amen { grid-template-columns: 1fr; }
+  .neighborhood #nearby .map { aspect-ratio: 4 / 3; min-height: 0; }
 }
 @media (max-width: 720px) {
   :root { --pad: 24px; }
@@ -194,7 +209,8 @@ h2 { font-size: clamp(36px, 4vw, 56px); text-wrap: balance; }
   .site-header nav { gap: 16px; }
   .brand { font-size: 20px; }
   .section, .contact, .cta { padding-top: 64px; padding-bottom: 72px; }
-  .area-grid { grid-template-columns: 1fr; padding-top: 64px; gap: 40px; }
+  .area-grid { grid-template-columns: 1fr; padding-top: 48px; gap: 40px; }
+  .neighborhood .section, .neighborhood .cta { padding-top: 56px; padding-bottom: 64px; }
   .hero-text { padding-top: 56px; padding-bottom: 48px; gap: 24px; }
   .plan-title h3 { font-size: 32px; }
   .photo-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; padding-top: 24px; }
