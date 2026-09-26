@@ -1,6 +1,6 @@
 # Instructions for AI assistants working on this site
 
-This is the website for La Mirage Apartments in Tempe. It is four plain HTML pages, one
+This is the website for La Mirage Apartments in Tempe. It is five plain HTML pages, one
 stylesheet, and a `photos/` folder. There is no build step and no framework. Keep it that way:
 no new libraries, no tooling, no JavaScript beyond the existing `lightbox.js`.
 
@@ -48,7 +48,7 @@ words and never leave placeholder text on a page.
 ## Changing words, phone number, email, hours, rent
 
 Search the HTML files for `EDIT:`. Each comment marks a spot and says what it is. The phone
-number appears on every page, as both a `tel:` link and visible text, so change all copies.
+number appears on every page except `availability.html`, as both a `tel:` link and visible text, so change all copies.
 
 ## Git
 
