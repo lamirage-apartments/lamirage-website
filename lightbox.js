@@ -2,7 +2,7 @@
 // photos, the X, the Esc key, or a click on the dark background closes it.
 // If this file fails to load, the gallery still works; the photos just don't enlarge.
 (function () {
-  var photos = Array.prototype.slice.call(document.querySelectorAll('.photo-grid img'));
+  var photos = Array.prototype.slice.call(document.querySelectorAll('.photo-grid img, .area-grid img'));
   if (!photos.length || !window.HTMLDialogElement) return;
 
   var box = document.createElement('dialog');

@@ -8,7 +8,8 @@ The website for La Mirage Apartments, 610 E Gilbert Dr, Tempe, AZ.
 | `index.html`                           | Home page                      |
 | `one-bedroom.html`, `two-bedroom.html` | Page per room type with photos |
 | `availability.html`                    | AppFolio listings board        |
-| `style.css`                            | Stylesheet for all four pages. |
+| `neighborhood.html`                    | Location page: distances, map, nearby places |
+| `style.css`                            | Stylesheet for every page.     |
 | `lightbox.js`                          | Opens gallery photos large when clicked. |
 | `resize-photos.py`                     | Shrinks phone photos for the web. |
 | `AGENTS.md`                            | How to add photos and make changes, written for AI assistants. |

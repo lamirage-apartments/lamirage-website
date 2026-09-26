@@ -1,6 +1,6 @@
 # Instructions for AI assistants working on this site
 
-This is the website for La Mirage Apartments in Tempe. It is four plain HTML pages, one
+This is the website for La Mirage Apartments in Tempe. It is five plain HTML pages, one
 stylesheet, and a `photos/` folder. There is no build step and no framework. Keep it that way:
 no new libraries, no tooling, no JavaScript beyond the existing `lightbox.js`.
 
@@ -25,7 +25,8 @@ words and never leave placeholder text on a page.
 
 3. **Name it like the others.** Lower case, hyphens, a prefix for where it belongs:
    `1x1-…` for the one bedroom, `2x2-…` for the two bedroom, `amenity-…` for the pool, spa,
-   grills and courtyard, `exterior-…` for the building and gate. For example `1x1-patio.jpg`.
+   grills and courtyard, `exterior-…` for the building and gate, `area-…` for places nearby such as
+   Tempe Town Lake. For example `1x1-patio.jpg`.
 
 4. **To replace a photo**, save the new file over the old one with the exact same name. No HTML
    changes are needed.
@@ -45,10 +46,16 @@ words and never leave placeholder text on a page.
 6. **The home page** shows one photo per floor-plan card and three amenity photos. Swap those by
    changing the file name in the matching `<img>` line in `index.html`.
 
+7. **The neighborhood page** (`neighborhood.html`) shows one photo per card, each with a small
+   credit line under it. Those photos come from Wikimedia Commons, and their licences require
+   the credit line, so keep it with the photo. To use your own photo instead, save it over the
+   `area-…` file and delete that card's `<p class="credit">` line; your own photos need no credit.
+   Never add a photo copied from another website.
+
 ## Changing words, phone number, email, hours, rent
 
 Search the HTML files for `EDIT:`. Each comment marks a spot and says what it is. The phone
-number appears on every page, as both a `tel:` link and visible text, so change all copies.
+number appears on every page except `availability.html`, as both a `tel:` link and visible text, so change all copies.
 
 ## Git
 
