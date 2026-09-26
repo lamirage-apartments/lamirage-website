@@ -150,11 +150,14 @@ h2 { font-size: clamp(36px, 4vw, 56px); text-wrap: balance; }
 .cta h2 { font-size: clamp(38px, 4.4vw, 60px); }
 .cta p { font-size: 18px; color: var(--ink-soft); text-wrap: pretty; }
 
-/* Neighborhood page: the short text sections and the note under the distances list */
-.prose { padding: 88px var(--pad) 8px; }
-.prose h2 { font-size: clamp(28px, 3vw, 38px); margin: 56px 0 16px; max-width: 680px; }
-.prose h2:first-child { margin-top: 0; }
-.prose p { font-size: 18px; color: var(--ink-soft); max-width: 680px; text-wrap: pretty; }
+/* Neighborhood page: the photo cards, the note under the distances list */
+.area-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 48px 32px; padding: 88px var(--pad) 8px; }
+.area-card { display: flex; flex-direction: column; gap: 14px; }
+.area-card .ph { aspect-ratio: 3 / 2; border: 1px solid var(--rule); cursor: zoom-in; margin-bottom: 6px; }
+.area-card h2 { font-size: clamp(26px, 2.6vw, 34px); }
+.area-card p { font-size: 17px; color: var(--ink-soft); text-wrap: pretty; }
+.area-card .credit { font-size: 12px; color: var(--muted); }
+.area-card .credit a { color: var(--muted); text-decoration: underline; }
 .amen-text .list-note { font-size: 13px; color: var(--muted); margin-top: -12px; }
 #nearby .amen-list li span:last-child { white-space: nowrap; text-align: right; }   /* keep "2.2 mi · 8 min drive" on one line; the place name wraps instead */
 
@@ -191,7 +194,7 @@ h2 { font-size: clamp(36px, 4vw, 56px); text-wrap: balance; }
   .site-header nav { gap: 16px; }
   .brand { font-size: 20px; }
   .section, .contact, .cta { padding-top: 64px; padding-bottom: 72px; }
-  .prose { padding-top: 64px; }
+  .area-grid { grid-template-columns: 1fr; padding-top: 64px; gap: 40px; }
   .hero-text { padding-top: 56px; padding-bottom: 48px; gap: 24px; }
   .plan-title h3 { font-size: 32px; }
   .photo-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; padding-top: 24px; }
